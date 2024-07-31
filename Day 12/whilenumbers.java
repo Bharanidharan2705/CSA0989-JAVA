@@ -1,0 +1,13 @@
+import java.util.*;
+class whilenumbers 
+{
+    public static void main(String arg []) 
+    {
+        int i = 0;
+        while (i <= 9) 
+        {
+            System.out.println(i);
+            i++;
+        }
+    }
+}
