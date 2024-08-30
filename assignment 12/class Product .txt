@@ -1,0 +1,47 @@
+class Product 
+{
+    int productId;
+    String productName;
+    double price;
+    int stockQuantity;
+    void displayProductDetails() 
+    {
+        System.out.println("Product ID: " + productId);
+        System.out.println("Product Name: " + productName);
+        System.out.println("Price: $" + price);
+        System.out.println("Stock Quantity: " + stockQuantity);
+    }
+    void updateStock(int newStock)
+    {
+        stockQuantity = newStock;
+    }
+}
+class Electronics extends Product 
+{
+    String warranty;
+    void displayProductDetails() 
+    {
+        super.displayProductDetails();
+        System.out.println("Warranty: " + warranty);
+    }
+}
+
+class Clothing extends Product 
+{
+    String size;
+    void displayProductDetails() 
+    {
+        super.displayProductDetails();
+        System.out.println("Size: " + size);
+    }
+}
+
+class Grocery extends Product 
+{
+    String expirationDate;
+
+    public void displayProductDetails() {
+        super.displayProductDetails();
+        System.out.println("Expiration Date: " + expirationDate);
+    }
+}

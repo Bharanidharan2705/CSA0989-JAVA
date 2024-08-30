@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class ExamQuestionShuffler {
+    private List<String> questions;
+
+    public ExamQuestionShuffler() {
+        questions = new ArrayList<>();
+    }
+
+    public void addQuestion(String question) {
+        questions.add(question);
+    }
+
+    public void shuffleQuestions() {
+        Collections.shuffle(questions);
+    }
+
+    public void displayQuestions() {
+        for (String question : questions) {
+            System.out.println(question);
+        }
+    }
+
+    public static void main(String[] args) {
+        ExamQuestionShuffler shuffler = new ExamQuestionShuffler();
+        shuffler.addQuestion("What is the capital of France?");
+        shuffler.addQuestion("What is 2 + 2?");
+        shuffler.addQuestion("What is the boiling point of water?");
+        shuffler.addQuestion("Who wrote 'Hamlet'?");
+
+        shuffler.shuffleQuestions();
+        shuffler.displayQuestions();
+    }
+}
